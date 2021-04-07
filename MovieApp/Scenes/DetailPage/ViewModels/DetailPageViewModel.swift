@@ -13,6 +13,7 @@ final class DetailPageViewModel: BaseViewModel {
     
     private var repository: DetailPageRepository!
     var behaviorRelay = BehaviorRelay<DetailModel>(value: DetailModel())
+    
     init(disposeBag: DisposeBag, DetailPageRepository: DetailPageRepository) {
         super.init()
         self.disposeBag = disposeBag

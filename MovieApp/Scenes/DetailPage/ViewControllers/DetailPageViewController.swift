@@ -21,7 +21,7 @@ final class DetailPageViewController: BaseViewController, DetailPageStoryboardLo
     @IBOutlet weak var country: UILabel!
     @IBOutlet weak var director: UILabel!
     @IBOutlet weak var released: UILabel!
-    
+    let logManager = LogManager.getInstance()
     
     var disposeBag: DisposeBag!
     var viewModel: DetailPageViewModel!
@@ -32,6 +32,7 @@ final class DetailPageViewController: BaseViewController, DetailPageStoryboardLo
         self.showSpinner()
         setNavigationBar()
         viewModel.getData(title: movieName)
+        
         subscribeViewModel()
     }
     

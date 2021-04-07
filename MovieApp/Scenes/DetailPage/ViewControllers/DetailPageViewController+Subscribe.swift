@@ -25,6 +25,7 @@ extension DetailPageViewController {
                 self.country.text = "Country => " + (value.country ?? "")
                 self.director.text = "Director => " + (value.director ?? "")
                 self.released.text = "Released => " + (value.released ?? "")
+                self.logManager.logEvent(data: value)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000)) {
                     self.removeSpinner()
                 }
